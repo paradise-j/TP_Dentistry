@@ -23,6 +23,7 @@
 
     <!-- Custom styles for this template-->
     <link href="./bootrap/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
@@ -91,11 +92,11 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="form-group row">
+                                    <!-- <div class="form-group row">
                                         <div class="col-md-7">
                                             <label class="form-label">ที่อยู่ตามทะเบียนบ้าน</label>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="form-group row">
                                         <div class="col-md-3">
                                             <label class="form-label">บ้านเลขที</label>
@@ -140,25 +141,30 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <button class="btn btn-primary btn-user btn-block" type="submit" name="btn_login">ลงทะเบียน</button>
+                                    <button class="btn btn-primary btn-user btn-block" type="submit" name="btn_login"  style="font-size: 1rem;">ลงทะเบียน</button>
                                 </form>
+                                <hr>
+                                <a href="index.php" class="btn btn-secondary" style="border-radius: 30px;"><i class='bx bx-arrow-back'></i>  กลับสู่หน้าหลัก</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        <!-- </div> -->
+
     </div>
 
     <!-- Bootstrap core JavaScript-->
+    
     <script src="./bootrap/vendor/jquery/jquery.min.js"></script>
     <script src="./bootrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="./bootrap/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="./bootrap/js/sb-admin-2.min.js"></script>
+    
 
     <script>
         $('#provinces').change(function(){

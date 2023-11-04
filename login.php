@@ -23,6 +23,7 @@
 
     <!-- Custom styles for this template-->
     <link href="./bootrap/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
@@ -66,6 +67,8 @@
                                     <div class="text-center">
                                         <a href="register.php" class="btn btn-primary btn-user btn-block" style="border-radius: 25px;">ลงทะเบียนเข้าใข้งานระบบ</a>
                                     </div>
+                                    <hr>
+                                    <a href="index.php" class="btn btn-secondary" style="border-radius: 30px;"><i class='bx bx-arrow-back'></i>  กลับสู่หน้าหลัก</a>
                                 </div>
                             </div>
                         </div>
@@ -84,6 +87,7 @@
 
     <!-- Core plugin JavaScript-->
     <script src="./bootrap/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="./bootrap/js/sb-admin-2.min.js"></script>
