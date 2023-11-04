@@ -1,3 +1,7 @@
+<?php
+    require_once 'connect.php';
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,6 +55,7 @@
                                         <div class="col-md-3 mb-3 mb-sm-0">
                                             <label class="form-label">คำนำหน้าชื่อ</label><br>
                                             <select class="form-control" aria-label="Default select example" name="prename" style="border-radius: 25px;" required>
+                                                <option value="">กรุณาเลือก....</option>
                                                 <option value="1">นาย</option>
                                                 <option value="2">นาง</option>
                                                 <option value="3">นางสาว</option>
@@ -58,31 +63,80 @@
                                         </div>
                                         <div class="col-md-4 mb-3 mb-sm-0">
                                             <label class="form-label">ชื่อ</label><br>
-                                            <input type="text" class="form-control" style="border-radius: 25px;" name="Fname" >
+                                            <input type="text" class="form-control" style="border-radius: 25px;" name="Fname" required>
                                         </div>
                                         <div class="col-md-5">
                                             <label class="form-label">นามสกุล</label><br>
-                                            <input type="text" class="form-control" style="border-radius: 25px;" name="Lname" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-8 mb-3 mb-sm-0">
-                                            <label class="form-label">อีเมล</label><br>
-                                            <input type="email" class="form-control" style="border-radius: 25px;" name="email" >
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="form-label">เบอร์โทรศัพท์</label><br>
-                                            <input type="tel" class="form-control" style="border-radius: 25px;" minlength="10" maxlength="10" name="tel" >
+                                            <input type="text" class="form-control" style="border-radius: 25px;" name="Lname" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-md-7 mb-3 mb-sm-0">
                                             <label class="form-label">วัน/เดือน/ปี ที่เกิด</label><br>
-                                            <input type="date" class="form-control" style="border-radius: 25px;" name="Bdate">
+                                            <input type="date" class="form-control" style="border-radius: 25px;" name="Bdate" required>
                                         </div>
                                         <div class="col-md-5 mb-3 mb-sm-0">
                                             <label class="form-label">เลขบัตรประจำตัวประชาชน</label><br>
-                                            <input type="text" class="form-control" style="border-radius: 25px;" minlength="13" maxlength="13" name="personid" >
+                                            <input type="text" class="form-control" style="border-radius: 25px;" minlength="13" maxlength="13" name="personid" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-8 mb-3 mb-sm-0">
+                                            <label class="form-label">อีเมล</label><br>
+                                            <input type="email" class="form-control" style="border-radius: 25px;" name="email" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label">เบอร์โทรศัพท์</label><br>
+                                            <input type="tel" class="form-control" style="border-radius: 25px;" minlength="10" maxlength="10" name="tel" required>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group row">
+                                        <div class="col-md-7">
+                                            <label class="form-label">ที่อยู่ตามทะเบียนบ้าน</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-md-3">
+                                            <label class="form-label">บ้านเลขที</label>
+                                            <input type="text" class="form-control" style="border-radius: 25px;" name="Homenumber" required>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="form-label">หมู่ที่</label>
+                                            <input type="number" class="form-control" style="border-radius: 25px;" name="Homenumber" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-md-6 mb-3 mb-sm-0">
+                                            <select class="form-control" aria-label="Default select example" id="provinces" name="provinces" style="border-radius: 30px;" required>
+                                                <option selected disabled>กรุณาเลือกจังหวัด....</option>
+                                                <?php 
+                                                    $stmt = $db->query("SELECT * FROM `provinces`");
+                                                    $stmt->execute();
+                                                    $pvs = $stmt->fetchAll();
+                                                    
+                                                    foreach($pvs as $pv){
+                                                ?>
+                                                <option value="<?= $pv['id']?>"><?= $pv['name_th']?></option>
+                                                <?php
+                                                    }
+                                                ?>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-5 mb-3 mb-sm-0">
+                                            <select class="form-control" aria-label="Default select example" id="amphures" name="amphures" style="border-radius: 30px;" required>
+                                                <option selected disabled>กรุณาเลือกอำเภอ....</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-md-5 mb-3 mb-sm-0">
+                                            <select class="form-control" aria-label="Default select example" id="districts" name="districts" style="border-radius: 30px;" required>
+                                                <option selected disabled>กรุณาเลือกตำบล....</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 mb-3 mb-sm-0">
+                                            <input type="text" required class="form-control" id="zipcode" name="zipcode" style="border-radius: 30px;" placeholder="รหัสไปรษณีย์" required>
                                         </div>
                                     </div>
                                     <hr>
@@ -105,17 +159,47 @@
 
     <!-- Custom scripts for all pages-->
     <script src="./bootrap/js/sb-admin-2.min.js"></script>
-    <!-- <script>
-        let imgInput = document.getElementById('imgInput');
-        let previewImg = document.getElementById('previewImg');
 
-        imgInput.onchange = evt => {
-            const [file] = imgInput.files;
-                if (file) {
-                    previewImg.src = URL.createObjectURL(file)
-            }
-        }
-    </script> -->
+    <script>
+        $('#provinces').change(function(){
+            var id_provnce = $(this).val();
+            $.ajax({
+                type : "post",
+                url : "address.php",
+                data : {id:id_provnce,function:'provinces'},
+                success: function(data){
+                    $('#amphures').html(data);
+                    $('#districts').html(' ');
+                    $('#zipcode').val(' ');
+                }
+            });
+        });
+
+        $('#amphures').change(function(){
+            var id_amphures = $(this).val();
+            $.ajax({
+                type : "post",
+                url : "address.php",
+                data : {id:id_amphures,function:'amphures'},
+                success: function(data){
+                    $('#districts').html(data);
+                    $('#zipcode').val(' ');
+                }
+            });
+        });
+
+        $('#districts').change(function(){
+            var id_districts = $(this).val();
+            $.ajax({
+                type : "post",
+                url : "address.php",
+                data : {id:id_districts,function:'districts'},
+                success: function(data){
+                    $('#zipcode').val(data)
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
