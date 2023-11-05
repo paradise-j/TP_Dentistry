@@ -15,10 +15,8 @@
                                                      `mem_Bdate`, `mem_perid`, `mem_homenum`, 
                                                      `mem_moo`, `mem_subdis`, `mem_dis`, 
                                                      `mem_province`, `mem_zipcode`, `mem_username`, `mem_password`)
-                             VALUES ('$namegf','$districts','$amphures','$provinces','$zipcode')");
+                                                     VALUES ('','','','','','','','','','','$districts','$amphures','$provinces','$zipcode','$username','$password')");
 
- 
-VALUES ('','','','','','','','','','','','','','','','')
         $sql->execute();
 
         if ($sql) {
