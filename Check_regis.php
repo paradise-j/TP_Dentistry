@@ -5,17 +5,29 @@
     require_once "connect.php";
 
     if (isset($_POST['submit'])) {
-        $namegf = $_POST['namegf'];
+        $prename = $_POST['prename'];
+        $Fname = $_POST['Fname'];
+        $Lname = $_POST['Lname'];
+        $Bdate = $_POST['Bdate'];
+        $personid = $_POST['personid'];
+        $email = $_POST['email'];
+        $tel = $_POST['tel'];
+        $Homenumber = $_POST['Homenumber'];
+        $moo = $_POST['moo'];
         $provinces = $_POST['provinces'];
         $amphures = $_POST['amphures'];
         $districts = $_POST['districts'];
         $zipcode = $_POST['zipcode'];
-        $sql = $db->prepare("INSERT INTO `tp_member`(`mem_id`, `mem_pre`, `mem_Fname`, 
+        $username = $_POST['personid'];
+        $password = $_POST['tel'];
+        $sql = $db->prepare("INSERT INTO `tp_member`(`mem_pre`, `mem_Fname`, 
                                                      `mem_Lname`, `mem_mail`, `mem_tel`, 
                                                      `mem_Bdate`, `mem_perid`, `mem_homenum`, 
                                                      `mem_moo`, `mem_subdis`, `mem_dis`, 
                                                      `mem_province`, `mem_zipcode`, `mem_username`, `mem_password`)
-                                                     VALUES ('','','','','','','','','','','$districts','$amphures','$provinces','$zipcode','$username','$password')");
+                                                     VALUES ('$prename','$Fname','$Lname','$Bdate','$personid',
+                                                             '$email','$tel','$Homenumber','$moo','$districts',
+                                                             '$amphures','$provinces','$zipcode','$username','$password')");
 
         $sql->execute();
 
@@ -32,10 +44,10 @@
                     });
                 })
             </script>";
-            header("refresh:1; url=Manage_Gfarm.php");
+            header("refresh:1; url=index.php");
         } else {
             $_SESSION['error'] = "เพิ่มข้อมูลเรียบร้อยไม่สำเร็จ";
-            header("location: Manage_Gfarm.php");
+            header("location: index.php");
         }
     }
 ?>
