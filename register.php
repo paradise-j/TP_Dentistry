@@ -82,11 +82,6 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <!-- <div class="form-group row">
-                                        <div class="col-md-7">
-                                            <label class="form-label">ที่อยู่ตามทะเบียนบ้าน</label>
-                                        </div>
-                                    </div> -->
                                     <div class="form-group row">
                                         <div class="col-md-3">
                                             <label class="form-label">บ้านเลขที</label>
