@@ -63,8 +63,9 @@
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-md-7 mb-3 mb-sm-0">
+                                            <?php $date = date('Y-m-d'); ?>
                                             <label class="form-label">วัน/เดือน/ปี ที่เกิด</label><br>
-                                            <input type="date" class="form-control" style="border-radius: 25px;" name="Bdate" required>
+                                            <input type="date" class="form-control" style="border-radius: 25px;" max="<?= $date; ?>" name="Bdate" required>
                                         </div>
                                         <div class="col-md-5 mb-3 mb-sm-0">
                                             <label class="form-label">เลขบัตรประจำตัวประชาชน</label><br>
