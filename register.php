@@ -47,9 +47,9 @@
                                             <label class="form-label">คำนำหน้าชื่อ</label><br>
                                             <select class="form-control" aria-label="Default select example" name="prename" style="border-radius: 25px;" required>
                                                 <option value="">กรุณาเลือก....</option>
-                                                <option value="1">นาย</option>
-                                                <option value="2">นาง</option>
-                                                <option value="3">นางสาว</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
                                             </select>
                                         </div>
                                         <div class="col-md-4 mb-3 mb-sm-0">
@@ -128,7 +128,7 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <button class="btn btn-primary btn-user btn-block" type="submit" name="btn_login"  style="font-size: 1rem;">ลงทะเบียน</button>
+                                    <button class="btn btn-primary btn-user btn-block" type="submit" name="submit"  style="font-size: 1rem;">ลงทะเบียน</button>
                                 </form>
                                 <hr>
                                 <a href="index.php" class="btn btn-secondary" style="border-radius: 30px;"><i class='bx bx-arrow-back'></i>  กลับสู่หน้าหลัก</a>
