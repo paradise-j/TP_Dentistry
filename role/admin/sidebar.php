@@ -2,7 +2,7 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-        <div class="sidebar-brand-text mx-3" style="font-size: 2rem">ผู้ดูแลระบบ</div>
+        <div class="sidebar-brand-text mx-3" style="font-size: 1.5rem">ผู้ดูแลระบบ</div>
     </a>
 
     <!-- Divider -->
@@ -32,8 +32,14 @@
         </div>
     </li>
 
-    <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
+        <a class="nav-link" href="tables.php">
+            <i class="fas fa-fw fa-table"></i>
+            <span>ข้อมูลการจอง</span></a>
+    </li>
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
             aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-wrench"></i>
@@ -48,7 +54,7 @@
                 <a class="collapse-item" href="utilities-other.html">Other</a>
             </div>
         </div>
-    </li>
+    </li> -->
 
     <!-- Divider -->
     <hr class="sidebar-divider">
