@@ -4,22 +4,6 @@
     session_start();
     require_once "connect.php";
 
-    $prename = $_POST['prename']; echo $prename;
-    $Fname = $_POST['Fname'];
-    $Lname = $_POST['Lname'];
-    $Bdate = $_POST['Bdate']; echo $Bdate;
-    $personid = $_POST['personid'];
-    $email = $_POST['email'];
-    $tel = $_POST['tel'];
-    $Homenumber = $_POST['Homenumber'];
-    $moo = $_POST['moo'];
-    $provinces = $_POST['provinces'];
-    $amphures = $_POST['amphures'];
-    $districts = $_POST['districts'];
-    $zipcode = $_POST['zipcode'];
-    $username = $_POST['personid'];
-    $password = $_POST['tel'];
-
     if (isset($_POST['submit'])) {
         $prename = $_POST['prename'];
         $Fname = $_POST['Fname'];
