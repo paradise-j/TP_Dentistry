@@ -41,17 +41,7 @@
                                 <div class="text-center">
                                     <h1 class="h3 text-gray-900 mb-4">ลงทะเบียนเข้าใข้งานระบบ</h1>
                                 </div>
-                                <form class="user" name="regiter" action="Check_regit.php" method="POST" enctype="multipart/form-data">
-                                    <!-- <div class="row mb-4">
-                                        <div class="col-md-4"></div>
-                                        <div class="col-md-1 text-center">
-                                            <img loading="lazy" width="120px" style="border-radius: 200px;" id="previewImg" alt="">
-                                        </div>
-                                        <div class="col-md-5 ml-5">
-                                            <label for="img" class="form-label">อัปโหลดรูปภาพ</label>
-                                            <input type="file" class="form-control" id="imgInput" style="border-radius: 30px;" name="img" required>
-                                        </div>
-                                    </div> -->
+                                <form class="user" name="regiter" action="Check_regis.php" method="POST">
                                     <div class="form-group row">
                                         <div class="col-md-3 mb-3 mb-sm-0">
                                             <label class="form-label">คำนำหน้าชื่อ</label><br>
@@ -142,12 +132,6 @@
                                             <input type="text" required class="form-control" id="zipcode" name="zipcode" style="border-radius: 30px;"  required>
                                         </div>
                                     </div>
-                                    <!-- <div class="form-group row">
-                                        <div class="col-md-3 mb-3 mb-sm-0">
-                                            <label class="form-label">รหัสไปรษณีย์</label>
-                                            <input type="text" required class="form-control" id="zipcode" name="zipcode" style="border-radius: 30px;"  required>
-                                        </div>
-                                    </div> -->
                                     <hr>
                                     <button class="btn btn-primary btn-user btn-block" type="submit" name="btn_login"  style="font-size: 1rem;">ลงทะเบียน</button>
                                 </form>
