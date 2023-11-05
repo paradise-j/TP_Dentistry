@@ -9,9 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ข้อมูลการจอง</title>
+    <title>ติดตามสถานะการจอง</title>
 
     <!-- Custom fonts for this template -->
+    <link rel="icon" type="image/png" href="../../img/home.png">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -47,7 +48,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h3 class="m-0 font-weight-bold text-primary">ตารางข้อมูลการจอง</h3>
+                            <h3 class="m-0 font-weight-bold text-primary">ตารางติดตามสถานะการจอง</h3>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
