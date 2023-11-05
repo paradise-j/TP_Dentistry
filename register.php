@@ -94,7 +94,7 @@
                                         </div>
                                         <div class="col-md-3">
                                             <label class="form-label">หมู่ที่</label>
-                                            <input type="number" class="form-control" style="border-radius: 25px;" name="Homenumber" required>
+                                            <input type="number" class="form-control" style="border-radius: 25px;" name="moo" required>
                                         </div>
                                         <div class="col-md-6 mb-3 mb-sm-0">
                                             <label class="form-label">จังหวัด</label>
