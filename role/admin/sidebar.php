@@ -28,6 +28,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="buttons.html">ข้อมูลแพทย์</a>
                 <a class="collapse-item" href="cards.html">ข้อมูลลูกค้า</a>
+                <a class="collapse-item" href="cards.html">ข้อมูลการจอง</a>
             </div>
         </div>
     </li>
@@ -35,7 +36,7 @@
     <li class="nav-item">
         <a class="nav-link" href="tables.php">
             <i class="fas fa-fw fa-table"></i>
-            <span>ข้อมูลการจอง</span></a>
+            <span>ติดตามสถานะการจอง</span></a>
     </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
