@@ -46,7 +46,7 @@
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
       <h1>ยินดีต้อนรับสู่ ทันตกรรมทับปุด</h1>
-      <a href="register.php" class="appointment-btn scrollto">ลงทะเบียนเข้าใข้งานระบบ</a>
+      <a href="register.php" class="reserve-btn scrollto">จองคิวทันที</a>
     </div>
   </section>
 
@@ -307,7 +307,7 @@
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <?php include('./footer/footer.php');?>
+  <?php include('../../footer/footer.php');?>
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
