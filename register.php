@@ -106,9 +106,8 @@
                                             <label class="form-label">หมู่ที่</label>
                                             <input type="number" class="form-control" style="border-radius: 25px;" name="Homenumber" required>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
                                         <div class="col-md-6 mb-3 mb-sm-0">
+                                            <label class="form-label">จังหวัด</label>
                                             <select class="form-control" aria-label="Default select example" id="provinces" name="provinces" style="border-radius: 30px;" required>
                                                 <option selected disabled>กรุณาเลือกจังหวัด....</option>
                                                 <?php 
@@ -124,22 +123,31 @@
                                                 ?>
                                             </select>
                                         </div>
+                                    </div>
+                                    <div class="form-group row">
                                         <div class="col-md-5 mb-3 mb-sm-0">
+                                            <label class="form-label">อำเภอ</label>
                                             <select class="form-control" aria-label="Default select example" id="amphures" name="amphures" style="border-radius: 30px;" required>
                                                 <option selected disabled>กรุณาเลือกอำเภอ....</option>
                                             </select>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-md-5 mb-3 mb-sm-0">
+                                        <div class="col-md-4 mb-3 mb-sm-0">
+                                            <label class="form-label">ตำบล</label>
                                             <select class="form-control" aria-label="Default select example" id="districts" name="districts" style="border-radius: 30px;" required>
                                                 <option selected disabled>กรุณาเลือกตำบล....</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-4 mb-3 mb-sm-0">
-                                            <input type="text" required class="form-control" id="zipcode" name="zipcode" style="border-radius: 30px;" placeholder="รหัสไปรษณีย์" required>
+                                        <div class="col-md-3 mb-3 mb-sm-0">
+                                            <label class="form-label">รหัสไปรษณีย์</label>
+                                            <input type="text" required class="form-control" id="zipcode" name="zipcode" style="border-radius: 30px;"  required>
                                         </div>
                                     </div>
+                                    <!-- <div class="form-group row">
+                                        <div class="col-md-3 mb-3 mb-sm-0">
+                                            <label class="form-label">รหัสไปรษณีย์</label>
+                                            <input type="text" required class="form-control" id="zipcode" name="zipcode" style="border-radius: 30px;"  required>
+                                        </div>
+                                    </div> -->
                                     <hr>
                                     <button class="btn btn-primary btn-user btn-block" type="submit" name="btn_login"  style="font-size: 1rem;">ลงทะเบียน</button>
                                 </form>
