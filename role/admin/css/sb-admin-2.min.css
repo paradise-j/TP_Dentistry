@@ -11190,6 +11190,10 @@ a:focus {
     font-size: .7rem
 }
 
+.text-nm {
+    font-size: 1.5rem
+}
+
 .text-lg {
     font-size: 1.2rem
 }
@@ -11570,7 +11574,7 @@ a:focus {
 .sidebar .nav-item .collapsing .collapse-inner {
     padding: .5rem 0;
     min-width: 10rem;
-    font-size: .85rem;
+    font-size: 0.9rem;
     margin: 0 0 1rem 0
 }
 
@@ -11581,7 +11585,7 @@ a:focus {
     padding: .5rem 1.5rem;
     text-transform: uppercase;
     font-weight: 800;
-    font-size: .65rem;
+    font-size: 0.9rem;
     color: #b7b9cc
 }
 
@@ -11747,12 +11751,12 @@ a:focus {
     }
 
     .sidebar .nav-item .nav-link i {
-        font-size: .85rem;
+        font-size: 1rem;
         margin-right: .25rem
     }
 
     .sidebar .nav-item .nav-link span {
-        font-size: .85rem;
+        font-size: 1rem;
         display: inline
     }
 
