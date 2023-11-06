@@ -73,7 +73,7 @@
         <?php include('sidebar.php');?>
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-                <div class="container-fluid mt-4">
+                <div class="container-fluid mt-5 col-md-11">
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h4 class="m-0 font-weight-bold text-primary" align="center">การจัดการข้อมูลแพทย์</h4>
@@ -93,7 +93,7 @@
                                             <th>ประเภทการบริการ</th>
                                             <th>วันที่จอง</th>
                                             <th>ช่วงเวลา</th>
-                                            <th>สถานะการจอง</th>
+                                            <th>สถานะ</th>
                                             <th></th>
                                             <th></th>
                                         </tr>
@@ -101,12 +101,12 @@
                                     <tbody>
                                         <tr>
                                             <td align="center">1</td>
-                                            <td>xxxxxxxxxxxxxxx xxxxxxxxxxxxxxx</td>
+                                            <td>xxxxxxxxxx xxxxxxxxxx</td>
                                             <td>xxxxxxxxxxxxxxxxxxxx</td>
                                             <td align="center">xx xxxxxxxx xxxx</td>
                                             <td align="center">xx.xx น.</td>
-                                            <td align="center">xxxxx</td>
-                                            <th align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1.2rem"></i></a></th>
+                                            <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td>
+                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
@@ -115,8 +115,8 @@
                                             <td>ทันตกรรมทั่วไป</td>
                                             <td align="center">12 กุมภาพันธ์ 2566</td>
                                             <td align="center">12.00 น.</td>
-                                            <td align="center">ปกติ</td>
-                                            <th align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1.2rem"></i></a></th>
+                                            <td align="center"><a class="btn btn-danger badge">ยกเลิก</a></td>
+                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
@@ -125,8 +125,8 @@
                                             <td>ทันตกรรมความงาม</td>
                                             <td align="center">8 มีนาคม 2566</td>
                                             <td align="center">15.00 น.</td>
-                                            <td align="center">ปกติ</td>
-                                            <th align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1.2rem"></i></a></th>
+                                            <td align="center"><a class="btn btn-danger badge">ยกเลิก</a></td>
+                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
@@ -135,8 +135,8 @@
                                             <td>ทันตกรรมความงาม</td>
                                             <td align="center">8 มีนาคม 2566</td>
                                             <td align="center">15.00 น.</td>
-                                            <td align="center">ปกติ</td>
-                                            <th align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1.2rem"></i></a></th>
+                                            <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td>
+                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
@@ -145,8 +145,8 @@
                                             <td>ทันตกรรมความงาม</td>
                                             <td align="center">8 มีนาคม 2566</td>
                                             <td align="center">15.00 น.</td>
-                                            <td align="center">ปกติ</td>
-                                            <th align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1.2rem"></i></a></th>
+                                            <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td>
+                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                     </tbody>
