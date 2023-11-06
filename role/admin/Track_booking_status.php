@@ -51,6 +51,11 @@
                         <div class="card-header py-3">
                             <h3 class="m-0 font-weight-bold text-primary">ตารางติดตามสถานะการจอง</h3>
                         </div>
+                        <div class="row mt-4 ml-2">
+                            <div class="col">
+                                <a class="btn btn-primary" style="border-radius: 30px;" type="submit" data-toggle="modal" data-target="#AddFooodModal">เพิ่มข้อมูลกลุ่มเลี้ยง</a>
+                            </div>
+                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
