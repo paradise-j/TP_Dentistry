@@ -34,7 +34,7 @@
                 <!-- Topbar -->
                 <?php include('topbar.php');?>
 
-                <div class="container-fluid">
+                <div class="container-fluid mt-4">
                     <div class="row">
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
