@@ -29,22 +29,10 @@
 </head>
 
 <body id="page-top">
-
-    <!-- Page Wrapper -->
     <div id="wrapper">
-
-        <!-- Sidebar -->
         <?php include('sidebar.php');?>
-
-        <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
             <div id="content">
-
-                <!-- Topbar -->
-                <?php include('topbar.php');?>
-
                 <div class="container-fluid mt-4">
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">

@@ -31,9 +31,6 @@
 
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-                <!-- Topbar -->
-                <?php include('topbar.php');?>
-
                 <div class="container-fluid mt-4">
                     <div class="row">
                         <!-- Earnings (Monthly) Card Example -->
