@@ -74,10 +74,10 @@
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 <?php include('topbar.php');?>
-                <div class="container-fluid">
+                <div class="container-fluid mt-4">
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h3 class="m-0 font-weight-bold text-primary" align="center">การจัดการข้อมูลแพทย์</h3>
+                            <h4 class="m-0 font-weight-bold text-primary" align="center">การจัดการข้อมูลแพทย์</h4>
                         </div>
                         <div class="row mt-4 ml-2">
                             <div class="col">
@@ -96,16 +96,18 @@
                                             <th>ช่วงเวลา</th>
                                             <th>สถานะการจอง</th>
                                             <th></th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td align="center">1</td>
-                                            <td>System Architect</td>
-                                            <td>ทันตกรรมความงาม</td>
-                                            <td align="center">16 มกราคม 2566</td>
-                                            <td align="center">10.00 น.</td>
-                                            <td align="center">ปกติ</td>
+                                            <td>xxxxxxxxxxxxxxx xxxxxxxxxxxxxxx</td>
+                                            <td>xxxxxxxxxxxxxxxxxxxx</td>
+                                            <td align="center">xx xxxxxxxx xxxx</td>
+                                            <td align="center">xx.xx น.</td>
+                                            <td align="center">xxxxx</td>
+                                            <th align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1.2rem"></i></a></th>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
@@ -115,6 +117,7 @@
                                             <td align="center">12 กุมภาพันธ์ 2566</td>
                                             <td align="center">12.00 น.</td>
                                             <td align="center">ปกติ</td>
+                                            <th align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1.2rem"></i></a></th>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
@@ -124,6 +127,27 @@
                                             <td align="center">8 มีนาคม 2566</td>
                                             <td align="center">15.00 น.</td>
                                             <td align="center">ปกติ</td>
+                                            <th align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1.2rem"></i></a></th>
+                                            <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">4</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>ทันตกรรมความงาม</td>
+                                            <td align="center">8 มีนาคม 2566</td>
+                                            <td align="center">15.00 น.</td>
+                                            <td align="center">ปกติ</td>
+                                            <th align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1.2rem"></i></a></th>
+                                            <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">5</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>ทันตกรรมความงาม</td>
+                                            <td align="center">8 มีนาคม 2566</td>
+                                            <td align="center">15.00 น.</td>
+                                            <td align="center">ปกติ</td>
+                                            <th align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1.2rem"></i></a></th>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                     </tbody>
