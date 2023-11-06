@@ -45,7 +45,7 @@
                 <!-- Topbar -->
                 <?php include('topbar.php');?>
 
-                <div class="container-fluid">
+                <div class="container-fluid mt-4">
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
