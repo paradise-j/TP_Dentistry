@@ -73,7 +73,7 @@
                                             <td align="center">16 มกราคม 2566</td>
                                             <td align="center">10.00 น.</td>
                                             <td align="center">ปกติ</td>
-                                            <td><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
+                                            <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td align="center">2</td>
@@ -82,7 +82,7 @@
                                             <td align="center">12 กุมภาพันธ์ 2566</td>
                                             <td align="center">12.00 น.</td>
                                             <td align="center">ปกติ</td>
-                                            <td><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
+                                            <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td align="center">3</td>
@@ -91,7 +91,7 @@
                                             <td align="center">8 มีนาคม 2566</td>
                                             <td align="center">15.00 น.</td>
                                             <td align="center">ปกติ</td>
-                                            <td ><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
+                                            <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                     </tbody>
                                 </table>
