@@ -23,6 +23,7 @@
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
 
 </head>
@@ -64,20 +65,9 @@
                                             <th></th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>ลำดับ</th>
-                                            <th>ชื่อผู้รับบริการ</th>
-                                            <th>ประเภทการบริการ</th>
-                                            <th>วันที่จอง</th>
-                                            <th>ช่วงเวลา</th>
-                                            <th>สถานะการจอง</th>
-                                            <th></th>
-                                        </tr>
-                                    </tfoot>
                                     <tbody>
                                         <tr>
-                                            <td>Tiger Nixon</td>
+                                            <td>1</td>
                                             <td>System Architect</td>
                                             <td>Edinburgh</td>
                                             <td>61</td>
@@ -86,7 +76,7 @@
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td>Garrett Winters</td>
+                                            <td>2</td>
                                             <td>Accountant</td>
                                             <td>Tokyo</td>
                                             <td>63</td>
@@ -95,7 +85,7 @@
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td>Ashton Cox</td>
+                                            <td>3</td>
                                             <td>Junior Technical Author</td>
                                             <td>San Francisco</td>
                                             <td>66</td>
