@@ -27,7 +27,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="ManageDoctor.php">ข้อมูลแพทย์</a>
-                <a class="collapse-item" href="ManageCus.php">ข้อมูลลูกค้า</a>
+                <a class="collapse-item" href="ManageCustomer.php">ข้อมูลลูกค้า</a>
                 <a class="collapse-item" href="ManageBooking.php">ข้อมูลการจอง</a>
             </div>
         </div>
