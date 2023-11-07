@@ -32,7 +32,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">เพิ่มข้อมูลพ่อ-แม่พันธุ์</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">เพิ่มข้อมูลแพทย์</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -89,11 +89,12 @@
                                     <thead align="center">
                                         <tr>
                                             <th>ลำดับ</th>
-                                            <th>ชื่อผู้รับบริการ</th>
+                                            <th>คำนำหน้าชื่อ</th>
+                                            <th>ชื่อ-สกุล</th>
+                                            <th>เบอร์ติดต่อ</th>
+                                            <th>รหัสแพทย์</th>
                                             <th>ประเภทการบริการ</th>
-                                            <th>วันที่จอง</th>
-                                            <th>ช่วงเวลา</th>
-                                            <th>สถานะ</th>
+                                            <!-- <th>สถานะ</th> -->
                                             <th></th>
                                             <th></th>
                                         </tr>
@@ -101,51 +102,56 @@
                                     <tbody>
                                         <tr>
                                             <td align="center">1</td>
-                                            <td>xxxxxxxxxx xxxxxxxxxx</td>
-                                            <td>xxxxxxxxxxxxxxxxxxxx</td>
-                                            <td align="center">xx xxxxxxxx xxxx</td>
-                                            <td align="center">xx.xx น.</td>
-                                            <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td>
+                                            <td align="center">ทพ.</td>
+                                            <td>xxxxxxxxxxx xxxxxxxxx</td>
+                                            <td align="center">0845631456</td>
+                                            <td align="center">ก56145</td>
+                                            <td align="center">ทันตกรรมความงาม</td>
+                                            <!-- <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td> -->
                                             <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td align="center">2</td>
-                                            <td>Accountant</td>
-                                            <td>ทันตกรรมทั่วไป</td>
-                                            <td align="center">12 กุมภาพันธ์ 2566</td>
-                                            <td align="center">12.00 น.</td>
-                                            <td align="center"><a class="btn btn-danger badge">ยกเลิก</a></td>
+                                            <td align="center">ทพญ.</td>
+                                            <td>xxxxxxxxxxx xxxxxxxxx</td>
+                                            <td align="center">0845631456</td>
+                                            <td align="center">ก56145</td>
+                                            <td align="center">ทันตกรรมความงาม</td>
+                                            <!-- <td align="center"><a class="btn btn-danger badge">ยกเลิก</a></td> -->
                                             <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td align="center">3</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>ทันตกรรมความงาม</td>
+                                            <td align="center">ทพญ.</td>
+                                            <td>xxxxxxxxxxx xxxxxxxxx</td>
                                             <td align="center">8 มีนาคม 2566</td>
                                             <td align="center">15.00 น.</td>
-                                            <td align="center"><a class="btn btn-danger badge">ยกเลิก</a></td>
+                                            <td align="center">ทันตกรรมความงาม</td>
+                                            <!-- <td align="center"><a class="btn btn-danger badge">ยกเลิก</a></td> -->
                                             <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td align="center">4</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>ทันตกรรมความงาม</td>
+                                            <td align="center">ทพ.</td>
+                                            <td>xxxxxxxxxxx xxxxxxxxx</td>
                                             <td align="center">8 มีนาคม 2566</td>
                                             <td align="center">15.00 น.</td>
-                                            <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td>
+                                            <td align="center">ทันตกรรมทั่วไป</td>
+                                            <!-- <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td> -->
                                             <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td align="center">5</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>ทันตกรรมความงาม</td>
+                                            <td align="center">ทพ.</td>
+                                            <td>xxxxxxxxxxx xxxxxxxxx</td>
                                             <td align="center">8 มีนาคม 2566</td>
                                             <td align="center">15.00 น.</td>
-                                            <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td>
+                                            <td align="center">ทันตกรรมทั่วไป</td>
+                                            <!-- <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td> -->
                                             <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
