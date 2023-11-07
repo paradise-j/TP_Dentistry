@@ -37,16 +37,15 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">เพิ่มข้อมูลแพทย์</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="Check_Add_fm.php" method="POST">
+                    <form action="./check_add/check_add_doc.php" method="POST">
                         <div class="mb-3">
                             <label class="form-label">คำนำหน้าชื่อ</label>
                             <select class="form-control" aria-label="Default select example" name="pre" style="border-radius: 30px;" required>
                                 <option selected>กรุณาเลือก....</option>
-                                <option value="ทพ.">ทพ.</option>
-                                <option value="ทพญ.">ทพญ.</option>
+                                <option value="1">ทพ.</option>
+                                <option value="2">ทพญ.</option>
                             </select>
                         </div>                    
                         <div class="mb-3">
@@ -59,11 +58,16 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">รหัสแพทย์</label>
-                            <input type="text" class="form-control" name="name" style="border-radius: 30px;" required>
+                            <input type="text" class="form-control" name="passDoctor" style="border-radius: 30px;" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">ประเภทการบริการ</label>
-                            <input type="text" class="form-control" name="name" style="border-radius: 30px;" required>
+                            <!-- <input type="text" class="form-control" name="type" style="border-radius: 30px;" required> -->
+                            <select class="form-control" aria-label="Default select example" name="type" style="border-radius: 30px;" required>
+                                <option selected>กรุณาเลือก....</option>
+                                <option value="1">ทันตกรรมทั่วไป</option>
+                                <option value="2">ทันตกรรมความงาม</option>
+                            </select>
                         </div>
                         <div class="modal-footer">
                             <button type="submit" name="submit" class="btn btn-primary" style="border-radius: 30px;">เพิ่มข้อมูล</button>
