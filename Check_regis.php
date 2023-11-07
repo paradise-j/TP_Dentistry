@@ -4,10 +4,16 @@
     session_start();
     require_once "connect.php";
 
+    // $Fname = $_POST['Fname'];
+    // $Lname = $_POST['Lname'];
+    // $name = $Fname." ".$Lname;
+
+
     if (isset($_POST['submit'])) {
         $prename = $_POST['prename'];
         $Fname = $_POST['Fname'];
         $Lname = $_POST['Lname'];
+        $name = $Fname." ".$Lname;
         $Bdate = $_POST['Bdate'];
         $personid = $_POST['personid'];
         $email = $_POST['email'];
@@ -20,12 +26,12 @@
         $zipcode = $_POST['zipcode'];
         $username = $_POST['personid'];
         $password = $_POST['tel'];
-        $sql = $db->prepare("INSERT INTO `tp_member`(`mem_pre`, `mem_Fname`, 
-                                                     `mem_Lname`, `mem_mail`, `mem_tel`, 
+        $sql = $db->prepare("INSERT INTO `tp_member`(`mem_pre`, `mem_name`, 
+                                                     `mem_mail`, `mem_tel`, 
                                                      `mem_Bdate`, `mem_perid`, `mem_homenum`, 
                                                      `mem_moo`, `mem_subdis`, `mem_dis`, 
                                                      `mem_province`, `mem_zipcode`, `mem_username`, `mem_password`)
-                                                     VALUES ('$prename','$Fname','$Lname','$email','$tel',
+                                                     VALUES ('$prename','$name','$email','$tel',
                                                              '$Bdate','$personid','$Homenumber','$moo','$districts',
                                                              '$amphures','$provinces','$zipcode','$username','$password')");
 
