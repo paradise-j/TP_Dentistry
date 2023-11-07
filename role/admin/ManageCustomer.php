@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+    require_once '../../connect.php';
+    session_start();
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
