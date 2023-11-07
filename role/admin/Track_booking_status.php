@@ -12,7 +12,7 @@
     <title>ติดตามสถานะการจอง</title>
 
     <!-- Custom fonts for this template -->
-    <link rel="icon" type="image/png" href="../../img/home.png">
+    <link rel="icon" type="image/png" href="../../img/edit_pro.png">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Kanit:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -27,23 +27,62 @@
     
 
 </head>
-
 <body id="page-top">
+    <!-- <div class="modal fade" id="AddDocModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">เพิ่มข้อมูลพ่อ-แม่พันธุ์</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="Check_Add_fm.php" method="POST">
+                        <div class="mb-3">
+                            <label class="form-label">คำนำหน้าชื่อ</label>
+                            <select class="form-control" aria-label="Default select example" name="pre" style="border-radius: 30px;" required>
+                                <option selected>กรุณาเลือก....</option>
+                                <option value="ทพ.">ทพ.</option>
+                                <option value="ทพญ.">ทพญ.</option>
+                            </select>
+                        </div>                    
+                        <div class="mb-3">
+                            <label class="form-label">ชื่อ-สกุล</label>
+                            <input type="text" class="form-control" name="name" style="border-radius: 30px;" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">เบอร์ติดต่อ</label>
+                            <input type="tel" class="form-control" name="tel" style="border-radius: 30px;" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">รหัสแพทย์</label>
+                            <input type="text" class="form-control" name="name" style="border-radius: 30px;" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">ประเภทการบริการ</label>
+                            <input type="text" class="form-control" name="name" style="border-radius: 30px;" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="submit" class="btn btn-primary" style="border-radius: 30px;">เพิ่มข้อมูล</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <div id="wrapper">
         <?php include('sidebar.php');?>
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-                <div class="container-fluid mt-4">
-                    <!-- DataTales Example -->
+                <div class="container-fluid mt-5 col-md-11">
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h3 class="m-0 font-weight-bold text-primary">ตารางติดตามสถานะการจอง</h3>
+                            <h4 class="m-0 font-weight-bold text-primary" align="center">ติดตามสถานะการจอง</h4>
                         </div>
-                        <div class="row mt-4 ml-2">
+                        <!-- <div class="row mt-4 ml-2">
                             <div class="col">
-                                <a class="btn btn-primary" style="border-radius: 30px;" type="submit" data-toggle="modal" data-target="#AddFooodModal">เพิ่มข้อมูลกลุ่มเลี้ยง</a>
+                                <a class="btn btn-primary" style="border-radius: 30px;" type="submit" data-toggle="modal" data-target="#AddDocModal">เพิ่มข้อมูลแพทย์</a>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -54,18 +93,20 @@
                                             <th>ประเภทการบริการ</th>
                                             <th>วันที่จอง</th>
                                             <th>ช่วงเวลา</th>
-                                            <th>สถานะการจอง</th>
+                                            <th>สถานะ</th>
+                                            <th></th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td align="center">1</td>
-                                            <td>System Architect</td>
-                                            <td>ทันตกรรมความงาม</td>
-                                            <td align="center">16 มกราคม 2566</td>
-                                            <td align="center">10.00 น.</td>
-                                            <td align="center">ปกติ</td>
+                                            <td>xxxxxxxxxx xxxxxxxxxx</td>
+                                            <td>xxxxxxxxxxxxxxxxxxxx</td>
+                                            <td align="center">xx xxxxxxxx xxxx</td>
+                                            <td align="center">xx.xx น.</td>
+                                            <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td>
+                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
@@ -74,7 +115,8 @@
                                             <td>ทันตกรรมทั่วไป</td>
                                             <td align="center">12 กุมภาพันธ์ 2566</td>
                                             <td align="center">12.00 น.</td>
-                                            <td align="center">ปกติ</td>
+                                            <td align="center"><a class="btn btn-danger badge">ยกเลิก</a></td>
+                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                         <tr>
@@ -83,7 +125,28 @@
                                             <td>ทันตกรรมความงาม</td>
                                             <td align="center">8 มีนาคม 2566</td>
                                             <td align="center">15.00 น.</td>
-                                            <td align="center">ปกติ</td>
+                                            <td align="center"><a class="btn btn-danger badge">ยกเลิก</a></td>
+                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
+                                            <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">4</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>ทันตกรรมความงาม</td>
+                                            <td align="center">8 มีนาคม 2566</td>
+                                            <td align="center">15.00 น.</td>
+                                            <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td>
+                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
+                                            <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">5</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>ทันตกรรมความงาม</td>
+                                            <td align="center">8 มีนาคม 2566</td>
+                                            <td align="center">15.00 น.</td>
+                                            <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td>
+                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
                                             <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
                                     </tbody>
