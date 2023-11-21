@@ -31,17 +31,18 @@
     <div class="container">
         <!-- <div class="row"> -->
             <!-- <div class="col-md-2"></div> -->
-            <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card o-hidden border-0 shadow-lg mt-3 mb-5">
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
                         <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
                         <div class="col-lg">
-                            <div class="p-5">
+                            <div class="p-4">
                                 <div class="text-center">
                                     <h1 class="h3 text-gray-900 mb-4">ลงทะเบียนเข้าใข้งานระบบ</h1>
                                 </div>
                                 <form class="user" name="regiter" action="Check_regis.php" method="POST">
+                                
                                     <div class="form-group row">
                                         <div class="col-md-3 mb-3 mb-sm-0">
                                             <label class="form-label">คำนำหน้าชื่อ</label><br>

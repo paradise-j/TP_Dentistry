@@ -47,15 +47,15 @@
     <div class="container">
       <h1>ยินดีต้อนรับสู่ ทันตกรรมทับปุด</h1>
       <a href="register.php" class="appointment-btn scrollto">ลงทะเบียนเข้าใข้งานระบบ</a>
+      <br><br><br><br><br><br><br><br>
     </div>
   </section>
 
   <main id="main">
 
     <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
+    <!-- <section id="why-us" class="why-us">
       <div class="container">
-
         <div class="row">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="content">
@@ -94,17 +94,17 @@
                   </div>
                 </div>
               </div>
-            </div><!-- End .content-->
+            </div>
           </div>
         </div>
-
       </div>
-    </section><!-- End Why Us Section -->
+    </section> -->
+    <!-- End Why Us Section -->
 
     <!-- ======= About Section ======= -->
+    <br><br><br><br><br><br><br><br><br><br><br>
     <section id="about" class="about">
       <div class="container-fluid">
-
         <div class="row">
           <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
@@ -271,7 +271,8 @@
             ?>
         </div>
       </div>
-    </section>
+    </section><br>
+
     <!-- End Doctors Section -->
 
     <!-- ======= Contact Section ======= -->
@@ -281,11 +282,9 @@
           <h2>การติดต่อ</h2>
         </div>
       </div>
-
       <div>
         <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3945.8013279471406!2d98.6326831!3d8.518661!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3051059e47a70897%3A0xfdea44c74d815278!2z4LiE4Lil4Li04LiZ4Li04LiB4LiX4Lix4LiZ4LiV4LiB4Lij4Lij4Lih4LiX4Lix4Lia4Lib4Li44LiU!5e0!3m2!1sth!2sth!4v1699038224208!5m2!1sth!2sth" frameborder="0" allowfullscreen></iframe>
-        </div>
-
+      </div>
       <div class="container">
         <div class="row mt-5 center">
           <div class="col-lg-1"></div>
