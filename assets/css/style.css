@@ -1187,7 +1187,7 @@ section {
 
 .doctors .member .pic {
   overflow: hidden;
-  width: 180px;
+  width: 150px;
   border-radius: 50%;
 }
 
@@ -1206,7 +1206,7 @@ section {
 .doctors .member h4 {
   font-weight: 700;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 28px;
   color: #2c4964;
 }
 
