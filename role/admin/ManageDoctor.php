@@ -1,6 +1,32 @@
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php
     require_once '../../connect.php';
     session_start();
+
+    if (isset($_GET['delete'])) {
+        $delete_id = $_GET['delete'];
+        $deletestmt = $db->query("DELETE FROM `doctor_data` WHERE `doc_id` = '$delete_id'");
+        $deletestmt->execute();
+        
+        if ($deletestmt) {
+            // echo "<script>alert('Data has been deleted successfully');</script>";
+            // header("refresh:1; url=ManageCustomer.php");
+            $_SESSION['success'] = "ลบข้อมูลเรียบร้อยแล้ว";
+            echo "<script>
+                $(document).ready(function() {
+                    Swal.fire({
+                        title: 'สำเร็จ',
+                        text: 'ลบข้อมูลเรียบร้อยแล้ว',
+                        icon: 'success',
+                        timer: 5000,
+                        showConfirmButton: false
+                    });
+                })
+            </script>";
+            header("refresh:1; url= ManageDoctor.php");
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -108,61 +134,45 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php 
+                                            $stmt = $db->query("SELECT * FROM `doctor_data`");
+                                            $stmt->execute();
+                                            $docs = $stmt->fetchAll();
+                                            $count = 1;
+                                            if (!$docs) {
+                                                echo "<p><td colspan='6' class='text-center'>ไม่พบข้อมูล</td></p>";
+                                            } else {
+                                            foreach($docs as $doc)  {  
+                                        ?>
                                         <tr>
-                                            <td align="center">1</td>
-                                            <td align="center">ทพ.</td>
-                                            <td>xxxxxxxxxxx xxxxxxxxx</td>
-                                            <td align="center">0845631456</td>
-                                            <td align="center">ก56145</td>
-                                            <td align="center">ทันตกรรมความงาม</td>
-                                            <!-- <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td> -->
-                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
-                                            <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
+                                            <td align="center"><?= $count ;?></td>
+                                            <td align="center">
+                                                <?php 
+                                                    if($doc['doc_pre'] == 1){
+                                                    echo "ทพ.";
+                                                    }else{
+                                                    echo "ทพญ.";
+                                                    }
+                                                ?>
+                                            </td>
+                                            <td><?= $doc['doc_name']  ;?></td>
+                                            <td align="center"><?= $doc['doc_tel'] ;?></td>
+                                            <td align="center"><?= $doc['doc_passDoctor'] ;?></td>
+                                            <td align="center">
+                                                <?php 
+                                                    if($doc['doc_type'] == 1){
+                                                    echo "ทันตกรรมทั่วไป";
+                                                    }else{
+                                                    echo "ทันตกรรมความงาม";
+                                                    }
+                                                ?>
+                                            </td>
+                                            <td align="center"><a href="Edit_doc.php?edit_id=<?= $doc['doc_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
+                                            <td align="center"><a class="btn btn-danger delete-btn" data-toggle="modal" data-target="#logoutModal22"><i class="fa-solid bx bxs-trash"></i></a></td>
                                         </tr>
-                                        <tr>
-                                            <td align="center">2</td>
-                                            <td align="center">ทพญ.</td>
-                                            <td>xxxxxxxxxxx xxxxxxxxx</td>
-                                            <td align="center">0845631456</td>
-                                            <td align="center">ก56145</td>
-                                            <td align="center">ทันตกรรมความงาม</td>
-                                            <!-- <td align="center"><a class="btn btn-danger badge">ยกเลิก</a></td> -->
-                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
-                                            <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center">3</td>
-                                            <td align="center">ทพญ.</td>
-                                            <td>xxxxxxxxxxx xxxxxxxxx</td>
-                                            <td align="center">8 มีนาคม 2566</td>
-                                            <td align="center">15.00 น.</td>
-                                            <td align="center">ทันตกรรมความงาม</td>
-                                            <!-- <td align="center"><a class="btn btn-danger badge">ยกเลิก</a></td> -->
-                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
-                                            <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center">4</td>
-                                            <td align="center">ทพ.</td>
-                                            <td>xxxxxxxxxxx xxxxxxxxx</td>
-                                            <td align="center">8 มีนาคม 2566</td>
-                                            <td align="center">15.00 น.</td>
-                                            <td align="center">ทันตกรรมทั่วไป</td>
-                                            <!-- <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td> -->
-                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
-                                            <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center">5</td>
-                                            <td align="center">ทพ.</td>
-                                            <td>xxxxxxxxxxx xxxxxxxxx</td>
-                                            <td align="center">8 มีนาคม 2566</td>
-                                            <td align="center">15.00 น.</td>
-                                            <td align="center">ทันตกรรมทั่วไป</td>
-                                            <!-- <td align="center"><a class="btn btn-success badge">&nbsp&nbspปกติ&nbsp&nbsp</a></td> -->
-                                            <td align="center"><a href="Edit_fm.php?edit_id=<?= $fm['fm_id']; ?>" class="btn btn-warning" name="edit_id"><i class="fa-solid bx bxs-edit" style="font-size: 1rem;"></i></a></td>
-                                            <td align="center"><a data-id="<?= $gf['gf_id']; ?>" href="?delete=<?= $gf['gf_id']; ?>" class="btn btn-danger delete-btn"><i class="fa-solid bx bxs-trash"></i></a></td>
-                                        </tr>
+                                            <?php $count++ ;?> 
+                                        <?php }
+                                            } ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -172,6 +182,24 @@
                 </div>
             </div>
             <?php include('footer.php');?>
+        </div>
+    </div>
+
+    <div class="modal fade" id="logoutModal22" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ลบข้อมูล</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">คุณต้องการที่จะลบข้อมูลนี้หรือไม่</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">ยกเลิก</button>
+                    <a data-id="<?= $doc['doc_id']; ?>" href="?delete=<?= $doc['doc_id']; ?>" class="btn btn-danger">ลบข้อมูล</a>
+                </div>
+            </div>
         </div>
     </div>
 
