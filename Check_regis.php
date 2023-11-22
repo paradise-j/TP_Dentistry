@@ -22,16 +22,6 @@
         $username = $_POST['personid'];
         $password = $_POST['tel'];
 
-        // $check_personid = $db->prepare("SELECT `mem_perid` FROM `tp_member` WHERE `mem_perid` = :mem_perid");
-        // $check_personid->bindParam(":mem_perid", $personid);
-        // $check_personid->execute();
-        // $row = $check_personid->fetch(PDO::FETCH_ASSOC);
-
-        // if($row['mem_perid'] == $personid) {
-        //     $_SESSION['warning'] = "เลขประจำตัวประชาชนนี้อยู่ในระบบแล้ว <a href='login.php'>คลิ๊กที่นี่</a> เพื่อเข้าสู่ระบบ";
-        //     header("location: register.php");
-        // }
-
         try {
             if (!isset($_SESSION['error'])) {
                 $sql = $db->prepare("INSERT INTO `tp_member`(`mem_pre`, `mem_name`, 
@@ -53,7 +43,7 @@
 
                 $sToken = "JmOIl7IYgz42fT0fEkaUZl4HO1Gv3ObSTmXb2xk07c1";
                 $sMessage = "แจ้งเตือนสมัครสมาชิก\r\n";
-                $sMessage .= $prename.$Fname." ".$Lname." ได้ทำการสมัครสมาชิก\r\n";
+                $sMessage .= $prename.$Fname." ".$Lname."\n ได้ทำการสมัครสมาชิก\r\n";
                 $sMessage .= "เบอร์โทรศัพท์ : ".$tel."\r\n";
                 $sMessage .= "อีเมล : ".$email."\r\n";
 
